@@ -28,6 +28,10 @@ display_board(board)
 # there are two different tokens - X and O
 # => X & 0
 
+def input_to_index(user input)
+  user_input.to_i - 1
+end
+
 
 
 # there are two players
@@ -38,11 +42,23 @@ display_board(board)
 # players take turns playing
 # => define what a turn is; how will a player take turns playing
 
+def move(board, index, player)
+  board[index] = player
+end
+
 
 
 # 1st trun - player 1
 # => iterate the game playing where players take turns; 
 # a player can't place a token on a square that's already taken
+
+def position_taken?(board, index)
+  if (board[index] == " ") || (board[index] == "") || (board[index] == nil)
+  	return false
+  else
+  	return true
+  end
+end
 
 
 
