@@ -2,21 +2,27 @@
 
 # the board
 # the board has nine empty squares 
+# => the board is an array of 9 empty squares
 
 
 # there are two different tokens - X and O
+# => X & 0
 
 
 
 # there are two players
+# => what is a a player/ how do we define a player
 
 
 
 # players take turns playing
+# => define what a turn is; how will a player take turns playing
 
 
 
 # 1st trun - player 1
+# => iterate the game playing where players take turns; 
+# a player can't place a token on a square that's already taken
 
 
 
@@ -40,10 +46,12 @@
 
 # 8 winning combinations: 
 #top row, middle row, bottom row, Left column, middle column, right column, left diagonal, and right diagonal
+# => define the combinations
 
 
 
 
 # there's a draw/ tie when the entire board is filled but there are no winning combinations
+# => define what a draw/ tie is; define what a filled board is 
 
 
