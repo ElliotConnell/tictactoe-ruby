@@ -32,6 +32,8 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
+input_to_index(user_input)
+
 
 
 # there are two players
@@ -45,6 +47,8 @@ end
 def move(board, index, player)
   board[index] = player
 end
+
+move(board, index, first_player = "X")
 
 
 
@@ -60,17 +64,33 @@ def position_taken?(board, index)
   end
 end
 
+position_taken?(board, index)
+
 def valid_move?(board, index)
   if index.between?(0, 8) && !position_taken?(board, index)
   	return true
   end
 end
 
+valid_move?(board, index)
+
 
 
 # player 1 places token (x) in only 1 square of their choice
 
+def turn_count(board)
+  counter = 0
+  board.each do |spaces|
+  	if spaces == "X" || spaces == "0"
+  	  counter += 1
+  	end
+  end
+  counter
+end
 
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
 
 # 2nd turn - player 2
 
@@ -82,7 +102,6 @@ end
 
 
 # 3rd turn - player 1...  repeat cycle until result
-
 
 
 
