@@ -92,6 +92,39 @@ def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
 end
 
+Play Method A
+
+def play(board)
+  counter = 0
+  until counter == 9
+  	turn(board)
+  	counter += 1
+  end
+end
+
+Play Method B
+
+def play(board)
+  until over?(board)
+  	turn (board)
+  end
+  if won?(board)
+  	winner(board) == "X" || winner(board) == "O"
+  	puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+  	puts "Cats Game!"
+  end
+end
+
+# until the game is over
+# players keep taking turns
+# plays the first few turns of the game
+# if there's a winner...
+	# we check who the winner is...
+	# can congratulate them 
+	# if there's a tie, print the message
+
+	
 # 2nd turn - player 2
 
 
