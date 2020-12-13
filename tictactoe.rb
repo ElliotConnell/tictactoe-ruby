@@ -53,6 +53,19 @@ move(board, index, first_player = "X")
 
 
 # 1st trun - player 1
+
+def turn(board)
+  puts "Please enter 1-9:"
+  user_input = gets.strip
+  index = input_to_index(user_input)
+  if valid_move? (board, index)
+  	move (board, index, current_player(board))
+  	turn(board)
+  end
+  display_board(board)
+end
+
+
 # => iterate the game playing where players take turns; 
 # a player can't place a token on a square that's already taken
 
@@ -126,8 +139,6 @@ end
 
 	
 # 2nd turn - player 2
-
-
 
 # player 2 places their token (0) in only one square of their choice
 # can't be placed in square with token
