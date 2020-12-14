@@ -185,4 +185,10 @@ end
 # there's a draw/ tie when the entire board is filled but there are no winning combinations
 # => define what a draw/ tie is; define what a filled board is 
 
+def full?(board)
+  board.all? {|i| i == "X" || i == "O"}
+end
+
+
+
 
