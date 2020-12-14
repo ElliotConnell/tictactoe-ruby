@@ -199,5 +199,12 @@ def draw?(board)
   end
 end
 
+#end the game
+
+def over?(board)
+  if draw?(board) || won?(board) || full?(board)
+  	return true
+  end
+end
 
 
