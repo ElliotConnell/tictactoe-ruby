@@ -208,3 +208,10 @@ def over?(board)
 end
 
 
+# announce the winner
+
+def winner(board)
+  if won?(board)
+  	return board[won?(board)[0]]
+  end
+end
