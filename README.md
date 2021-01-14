@@ -34,3 +34,6 @@ Play continues until one player has 3 tokens in a row or the board is full.
 - right diagonal
 
 
+## Flowchart
+
+![Flowchart] tictactoe.jpg
