@@ -15,3 +15,11 @@ Play continues until one player has 3 tokens in a row or the board is full.
 - when a player has 3 of their tokens in a row they are declared the winner
 - if the board is full and there is no winner, the game is declared a draw
 
+### Validation after each move
+
+- is the grid position valid
+- is the square position already taken
+- is there a winner
+- are all squares occupied
+
+
