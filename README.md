@@ -36,4 +36,4 @@ Play continues until one player has 3 tokens in a row or the board is full.
 
 ## Flowchart
 
-![Flowchart] tictactoe.jpg
+![Flowchart](tictactoe.jpg)
