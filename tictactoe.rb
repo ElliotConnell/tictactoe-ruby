@@ -1,7 +1,7 @@
 
 # display the board
 
-puts board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -41,7 +41,7 @@ end
 def turn_count(board)
   counter = 0
   board.each do |spaces|
-  	if spaces == "X" || spaces == "0"
+  	if spaces == "X" || spaces == "O"
   	  counter += 1
   	end
   end
