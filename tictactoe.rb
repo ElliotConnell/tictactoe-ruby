@@ -104,9 +104,14 @@ def over?(board)
   if draw?(board) || won?(board) || full?(board)
   	return true
   end
-  return false
 end
 
+def winner(board)
+	winning_player = turn_count(board) % 2 == 0 ? "O" : "X"
+	display_board(board)
+	puts "Congratulations Player #{winning_player}!"
+	exit
+end
 
 def turn(board)
   display_board(board)
@@ -117,14 +122,7 @@ def turn(board)
     move(board, index, current_player(board))
 
     if won?(board)
-    	display_board(board)
-    	if current_player(board) == "O"
-    		puts "Congratulations Player X!"
-    		exit
-    	else
-    		puts "Congratulations Player O!"
-    		exit
-    	end
+    	winner(board)
     end
 
     if over?(board)
@@ -143,49 +141,3 @@ end
 turn(board)
 
 
-# outline when there's no result and the board is full
-
-
-# over?(board)
-    
-# announce the winner
-
-# def winner(board)
-#   if won?(board)
-#     # puts "ec18"
-#     return board[won?(board)[0]]
-#   end
-# end
-
-
-
-# # define the play methods
-
-# # play method a 
-
-# def play(board)
-#   counter = 0
-#   until counter == 9
-#     # puts "ec19"
-#     turn(board)
-#     counter += 1
-#   end
-# end
-
-
-# # play method b
-
-# def play(board)
-#   until over?(board)
-#     turn(board)
-#   end
-#   if draw?(board)
-#     puts "Cats Game!"
-#   end
-# end
-
-# play(board)
-
-
-
-# puts won?(board)
