@@ -8,6 +8,13 @@ def rules()
 	puts "Player 1 is  X, Player 2 is O."
 	puts "The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner."
 	puts "When all 9 squares are full, the game is over."
+	puts "The grid is numbered 1-9 across the board."
+	puts ""
+	puts " 1 | 2 | 3 "
+	puts "-----------"
+	puts " 4 | 5 | 6 "
+	puts "-----------"
+  	puts " 7 | 8 | 9 "
 end
 
 def start()
@@ -19,7 +26,7 @@ def start()
 		puts ""
 		start()
 	elsif input == 'play'
-		puts "stuff"
+		require_relative 'tictactoe'
 	end
 end
 
